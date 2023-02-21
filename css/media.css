@@ -1,0 +1,476 @@
+@media (max-width: 992px) {
+
+  .hero {
+    padding-bottom: 132px;
+    background: url(../img/hero-768.png), radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+    background-repeat: no-repeat;
+    background-position: 91% 44%;
+  }
+
+  .hero__title {
+    margin-bottom: 17px;
+    font-size: 50px;
+  }
+
+  .advantage {
+    padding: 79px 0;
+  }
+
+  .advantage__block {
+    margin-bottom: 23px;
+    padding-left: 239px;
+    background-image: url(../img/advantage-768.png);
+  }
+
+  .advantage__item-block {
+    background-position: left top;
+    padding: 0;
+    padding-top: 90px;
+  }
+
+  .teachers {
+    padding-bottom: 29px;
+  }
+
+  .teachers__item {
+    margin-bottom: 23px;
+  }
+
+  .courses {
+    padding-bottom: 49px;
+  }
+
+  .courses__item {
+    margin-bottom: 30px;
+    min-height: 556px;
+  }
+
+  .courses__descr {
+    padding-bottom: 30px;
+  }
+
+  .courses__link {
+    padding: 20px 56px;
+  }
+
+  .block1::before {
+    top: 12px;
+    right: 25px;
+  }
+
+  .block2::before {
+    top: 12px;
+    right: 25px;
+  }
+
+  .block3::before {
+    top: 12px;
+    right: 25px;
+  }
+
+  .block4::before {
+    top: 12px;
+    right: 25px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .block1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block1-768.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .block2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block2-768.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .block3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block3-768.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .block4::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block4-768.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .header__top {
+    padding: 29px 0;
+  }
+
+  .header__content {
+    justify-content: center;
+  }
+
+  .header__link {
+    margin-right: 0;
+    margin-bottom: 28px;
+  }
+
+  .hero {
+    padding-top: 76px;
+    background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+  }
+
+  .advantage {
+    padding: 81px 0;
+    padding-bottom: 57px;
+  }
+
+  .advantage__block {
+    padding-left: 180px;
+    background-image: url(../img/advantage-576.png);
+    background-position: top left;
+  }
+
+  .teachers {
+    padding-bottom: 47px;
+  }
+
+  .teachers__item {
+    margin-bottom: 25px;
+  }
+
+  .teachers__name {
+    padding-top: 27px;
+  }
+
+  .courses {
+    padding-bottom: 48px;
+  }
+
+  .courses__link {
+    padding: 20px 48px;
+  }
+
+  .courses__subtitle {
+    line-height: 130%;
+  }
+
+  .courses__item {
+    margin-bottom: 32px;
+    min-height: 653px;
+  }
+
+}
+
+@media (max-width: 575px) {
+
+  .header__content {
+    justify-content: space-between;
+  }
+
+  .block1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block1-1440.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .block2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block2-1440.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .block3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block3-1440.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .block4::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block4-1440.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .header__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 76px;
+    padding-left: 15px;
+    visibility: hidden;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: #2F2C45;
+    transform: translate(100%);
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+
+  }
+
+  .header__nav--active {
+    visibility: visible;
+    transform: none;
+  }
+
+  .header__nav .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__nav .nav__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 56px;
+  }
+
+  .header__link {
+    margin-bottom: 0;
+  }
+
+  .burger {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 16px;
+  }
+
+  .burger--active {
+    z-index: 1001;
+  }
+
+  .burger--active .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger--active .burger-line:first-child {
+    top: 50%;
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+
+  .burger--active .burger-line:last-child {
+    top: 50%;
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+
+  .burger-line {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #fff;
+    right: 24%;
+    transition: transform .3s ease-in-out, top .3s ease-in-out;
+  }
+
+  .burger-line:nth-child(1) {
+    top: 0;
+  }
+
+  .burger-line:nth-child(2) {
+    top: 44%;
+  }
+
+  .burger-line:nth-child(3) {
+    bottom: 0;
+  }
+
+  .hero {
+    padding-top: 50px;
+    padding-bottom: 51px;
+  }
+
+  .hero__title {
+    margin-bottom: 5px;
+    font-size: 30px;
+  }
+
+  .hero__link {
+    padding: 20px 53px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .hero__descr {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  .advantage {
+    padding: 49px 0;
+    padding-bottom: 20px;
+  }
+
+  .advantage__block {
+    margin-bottom: 25px;
+    background: none;
+    padding: 0;
+  }
+
+  .advantage__title {
+    margin-bottom: 2px;
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  .advantage__item-block {
+    padding: 2px 0 2px 110px;
+    background-position: left;
+  }
+
+  .advantage__item {
+    margin-bottom: 29px;
+  }
+
+  .teachers {
+    padding-top: 47px;
+    padding-bottom: 22px;
+  }
+
+  .teachers__title {
+    margin-bottom: 26px;
+    font-size: 20px;
+  }
+
+  .teachers__item {
+    margin-bottom: 24px;
+  }
+
+  .courses {
+    padding-top: 45px;
+    padding-bottom: 21px;
+  }
+
+  .courses__title {
+    margin-bottom: 28px;
+    font-size: 20px;
+  }
+
+
+  .courses__link {
+    padding: 20px 56px;
+  }
+
+  .courses__item {
+    margin-bottom: 30px;
+    min-height: 653px;
+  }
+
+  .courses__subtitle {
+    margin-bottom: 9px;
+  }
+}
+
+@media (min-width: 335px) and (max-width: 575px) {
+
+  .advantage__item-block {
+    padding: 21px 0 21px 110px;
+  }
+
+
+}
+
+@media (max-width: 320px) {
+  .block1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block1-320.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .block2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block2-320.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .block3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block3-320.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .block4::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/block4-320.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+}

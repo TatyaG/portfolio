@@ -1,0 +1,498 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+    url('../fonts/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+    url('../fontsRoboto-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --radius: 20px;
+  --light-blue: #6f8ee8;
+  --melrose: #c8c2ff;
+  --gray: #666666;
+  --dark-blue: #1300c2;
+  --blue: #3F2AFF;
+}
+
+p,
+ul,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list-reset {
+  list-style: none;
+}
+
+
+.link {
+  outline: none;
+  padding: 24px 75px;
+  border-radius: var(--radius);
+  background-color: var(--blue);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  transition: background-color .3s ease-in-out;
+}
+
+.link:hover,
+.link:focus-visible {
+  background-color: var(--light-blue);
+}
+
+.link:active {
+  background-color: var(--dark-blue);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wraper {
+  overflow: hidden;
+}
+
+.burger {
+  display: none;
+}
+
+.btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+
+
+.header__top {
+  padding: 27px 0;
+  background-color: var(--blue);
+}
+
+.header__content {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__link {
+  margin-right: auto;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 56px;
+}
+
+.nav__link {
+  line-height: 21px;
+  color: #FFFFFF;
+  transition: color .3s ease-in-out;
+}
+
+.nav__link:hover {
+  color: var(--melrose);
+}
+
+.nav__link:focus-visible {
+  outline-offset: 5px;
+  outline: 1px solid var(--melrose);
+}
+
+.nav__link:active {
+  color: #FFFFFF;
+}
+
+
+.hero {
+  padding: 129px 0;
+  background: url(../img/hero-1440.png), radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+  background-repeat: no-repeat;
+  background-position: 79.5% 50%;
+}
+
+
+
+.hero__title {
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  color: #FFFFFF;
+
+}
+
+.hero__descr {
+  margin-bottom: 65px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+
+.advantage {
+  padding: 78px 0;
+}
+
+.advantage__block {
+  margin-bottom: 20px;
+  padding-left: 190px;
+  background-image: url('../img/advantage-1440.png');
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+}
+
+.advantage__title {
+  max-width: 380px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: #2E2B44;
+
+}
+
+.advantage__descr {
+  max-width: 585px;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--gray);
+
+}
+
+.advantage__content {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--gray);
+}
+
+.advantage__item-block {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 16px 0 16px 110px;
+}
+
+.advantage__first {
+  background-image: url('../img/eye.svg');
+}
+
+.advantage__second {
+  background-image: url('../img/fingers.svg');
+}
+
+.advantage__third {
+  background-image: url('../img/eye-circle.svg');
+}
+
+.teachers {
+  background-color: #212133;
+  padding: 74px 0;
+}
+
+.teachers__title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: #FFFFFF;
+}
+
+.teachers__block {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.teachers__name {
+  margin-bottom: 7px;
+  padding-top: 25px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+
+.teachers__descr {
+  font-size: 16px;
+  line-height: 150%;
+  color: #85859B;
+}
+
+.courses {
+  padding: 73px 0;
+  padding-bottom: 51px;
+
+}
+
+.courses__item {
+  margin-bottom: 30px;
+}
+
+.courses__block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+  padding: 30px;
+  padding-top: 210px;
+  background-color: #EDF0F9;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: var(--radius);
+  transition: background-color .3s ease-in-out;
+}
+
+.block1::before {
+  position: absolute;
+  padding-left: 29px;
+  content: '60 часов';
+  z-index: 1;
+  top: 13px;
+  bottom: 0;
+  right: 19px;
+  background-image: url(../img/time.svg);
+  background-repeat: no-repeat;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.block2::before {
+  position: absolute;
+  padding-left: 29px;
+  content: '40 часов';
+  z-index: 1;
+  top: 13px;
+  bottom: 0;
+  right: 19px;
+  background-image: url(../img/time.svg);
+  background-repeat: no-repeat;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.block3::before {
+  position: absolute;
+  padding-left: 29px;
+  content: '40 часов';
+  z-index: 1;
+  top: 13px;
+  bottom: 0;
+  right: 19px;
+  background-image: url(../img/time.svg);
+  background-repeat: no-repeat;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.block4::before {
+  position: absolute;
+  padding-left: 29px;
+  content: '80 часов';
+  z-index: 1;
+  top: 13px;
+  bottom: 0;
+  right: 19px;
+  background-image: url(../img/time.svg);
+  background-repeat: no-repeat;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+
+.courses__title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: #212133;
+}
+
+.courses__subtitle {
+  margin-bottom: 7px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #212133;
+}
+
+.courses__descr {
+  margin-bottom: auto;
+
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--gray);
+
+}
+
+.courses__item {
+  display: flex;
+  position: relative;
+
+}
+
+.courses__item:hover .courses__block {
+  background-color: #e4e9f6;
+}
+
+.courses__link {
+  max-width: max-content;
+  padding: 20px 59px;
+  font-size: 16px;
+  line-height: 19px;
+  font-style: normal;
+  z-index: 1;
+}
+
+.block1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/block1-1440.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.block2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/block2-1440.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.block3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/block3-1440.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.block4::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/block4-1440.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.courses__hour {
+  position: absolute;
+  top: 13px;
+  right: 19px;
+  bottom: 0;
+  padding-left: 29px;
+  background-image: url(../img/time.svg);
+  background-repeat: no-repeat;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+
+.footer__top {
+  padding: 28px 0;
+  background-color: #2E2B44;
+}
+
+.footer__list {
+  justify-content: center;
+  align-items: center;
+
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+}
+
+.footer__link path {
+  fill: #FFFFFF;
+  transition: fill .3s ease-in-out;
+}
+
+
+.footer__link:hover path {
+  fill: var(--light-blue);
+}
+
+.footer__link:focus-visible {
+  outline-offset: 5px;
+  outline: 1px solid var(--light-blue);
+}
+
+.copy {
+  color: var(--blue);
+}
+
+.footer__copy {
+  font-size: 13px;
+  line-height: 15px;
+  color: #2E2B44;
+}
+
+.footer__bottom {
+  text-align: center;
+}
