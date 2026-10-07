@@ -73,3 +73,9 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## GitHub Pages
+
+The `Deploy to GitHub Pages` workflow generates and deploys the static site when changes are pushed to `master`, or when started manually from the Actions tab. The site is published at https://tatyag.github.io/portfolio/.
+
+In the repository settings, open **Settings → Pages** and set the build and deployment source to **GitHub Actions**.

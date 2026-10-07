@@ -19,6 +19,10 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/portfolio/',
+    nitro: {
+      preset: 'github-pages'
+    },
     head: {
       htmlAttrs: { lang: 'ru' },
       title: 'Татевик Габриелян — Frontend-разработчик',
