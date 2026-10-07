@@ -1,3 +1,5 @@
+@import './fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,20 +9,28 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-night text-zinc-300;
+    font-family: 'Montserrat', sans-serif;
+    @apply bg-night text-stone-700;
+    background-image:
+      radial-gradient(ellipse at 12% 8%, rgba(255, 224, 232, 0.58), transparent 34rem),
+      radial-gradient(ellipse at 88% 28%, rgba(255, 239, 220, 0.52), transparent 32rem),
+      radial-gradient(ellipse at 50% 85%, rgba(241, 228, 255, 0.36), transparent 38rem);
   }
   ::selection {
-    @apply bg-violet-500 text-white;
+    @apply bg-rose-200 text-rose-950;
   }
   ::-webkit-scrollbar {
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #09090f;
+    background: #f8eef0;
   }
   ::-webkit-scrollbar-thumb {
-    background: #23233a;
+    background: #e7c6cf;
     border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d7a5b2;
   }
 }
 
@@ -28,30 +38,68 @@
   .wrapper {
     @apply mx-auto w-full max-w-6xl px-6;
   }
+
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-violet-500 px-6 py-3 font-medium text-white transition-all duration-300 hover:bg-violet-400 hover:shadow-[0_0_36px_rgba(139,92,246,0.4)] active:scale-95;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-rose-500 px-6 py-3 font-medium text-white transition-all duration-300 hover:bg-rose-600 hover:shadow-[0_8px_28px_rgba(219,112,147,0.2)] active:scale-95;
   }
+
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-6 py-3 font-medium text-zinc-200 transition-colors duration-300 hover:border-violet-400/50 hover:text-white;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-rose-200 bg-white/50 px-6 py-3 font-medium text-stone-700 transition-all duration-300 hover:border-rose-300 hover:bg-white hover:text-rose-800;
   }
+
   .card {
-    @apply rounded-2xl border border-white/10 bg-panel/70 p-6 backdrop-blur-sm;
+    @apply rounded-[1.75rem] border border-pink-100/90 bg-white/85 p-6 shadow-[0_12px_40px_rgba(155,91,111,0.07)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_48px_rgba(155,91,111,0.11)];
   }
+
   .tag {
-    @apply rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1 text-sm text-zinc-300 transition-colors hover:border-violet-400/50 hover:text-white;
+    @apply rounded-full border border-pink-100 bg-pink-50/80 px-3 py-1 text-sm text-stone-600 transition-colors hover:border-pink-300 hover:text-rose-800;
   }
+
   .kicker {
-    @apply text-xs font-semibold uppercase tracking-[0.3em] text-violet-400;
+    font-family: 'Hachi Maru Pop';
+    @apply text-xs font-semibold uppercase tracking-[0.3em] text-rose-600;
   }
+
+  .kicker::before {
+    content: '✿';
+    @apply mr-2 text-rose-400;
+  }
+
   .text-gradient {
-    @apply bg-gradient-to-r from-violet-400 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-rose-500 via-pink-500 to-rose-400 bg-clip-text text-transparent;
+  }
+
+  .section-heading {
+    padding-bottom: 20px;
+    font-family: 'Hachi Maru Pop';
+    font-size: clamp(2.5rem, 5vw, 3.25rem);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  .section-heading::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 8rem;
+    height: 0.5rem;
+    border-top: 2px solid #f3a6b9;
+    border-radius: 50%;
+    transform: rotate(-3deg);
   }
 }
 
-/* фоновая сетка для hero */
 .bg-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 54px 54px;
+  background-image: radial-gradient(rgba(190, 115, 140, 0.16) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(8deg);
+  }
 }

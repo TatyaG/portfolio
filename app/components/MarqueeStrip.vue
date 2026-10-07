@@ -1,15 +1,15 @@
 <template>
-  <section ref="root" class="relative overflow-hidden border-y border-white/5 bg-panel/50 py-5">
+  <section ref="root" class="relative overflow-hidden border-y border-pink-100 bg-white/55 py-5">
     <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-night to-transparent" />
     <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-night to-transparent" />
 
     <div ref="track" class="flex w-max will-change-transform">
       <div v-for="n in 2" :key="n" class="flex items-center gap-10 pr-10" aria-hidden="true">
         <div v-for="item in items" :key="item" class="flex items-center gap-10">
-          <span class="whitespace-nowrap font-display text-sm uppercase tracking-[0.25em] text-zinc-500">
+          <span class="whitespace-nowrap font-display text-sm uppercase tracking-[0.25em] text-slate-500">
             {{ item }}
           </span>
-          <span class="h-1.5 w-1.5 rounded-full bg-violet-400/70" />
+          <span class="h-1.5 w-1.5 rounded-full bg-rose-400" />
         </div>
       </div>
     </div>
@@ -50,4 +50,3 @@ onBeforeUnmount(() => {
   tween?.kill()
 })
 </script>
-

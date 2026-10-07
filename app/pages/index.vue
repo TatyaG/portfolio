@@ -1,10 +1,9 @@
 <template>
   <div>
     <AppHeader />
-    <main>
-      <HeroSection />
-      <MarqueeStrip />
+    <main class="flex flex-col gap-24 max-md:gap-12" :style="{paddingTop: `${headerStore.height}px`}">
       <AboutSection />
+      <MarqueeStrip />
       <SkillsSection />
       <ExperienceSection />
       <EducationSection />
@@ -15,7 +14,9 @@
 </template>
 
 <script setup lang="ts">
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+const headerStore = useHeaderStore();
 
 useHead({
   meta: [
@@ -33,4 +34,3 @@ onMounted(() => {
   document.fonts?.ready.then(() => ScrollTrigger.refresh())
 })
 </script>
-

@@ -1,46 +1,41 @@
 <template>
-    <section id="experience" ref="root" class="scroll-mt-20 py-24">
+    <section id="experience" ref="root" :style="{ scrollMarginTop: `calc(${headerStore.height}px + 1rem)` }">
         <div class="wrapper">
             <div class="flex flex-col gap-14 items-start">
                 <div class="flex flex-col gap-6 items-start">
                     <SectionTitle kicker="Опыт работы" title="Где я работала" />
-
-                    <div v-reveal
-                        class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-panel/60 px-4 py-1.5 text-sm text-zinc-400">
-                        Итого: <b class="text-zinc-100">3 года 5 месяцев</b> коммерческой разработки
-                    </div>
                 </div>
 
 
                 <div class="timeline relative w-full">
                     <div
-                        class="timeline-line absolute bottom-0 left-[11px] top-0 w-px origin-top scale-y-0 bg-gradient-to-b from-violet-400 via-fuchsia-400/50 to-transparent" />
+                        class="timeline-line absolute bottom-0 left-[11px] top-0 w-px origin-top scale-y-0 bg-gradient-to-b from-rose-400 via-pink-300 to-transparent" />
 
                     <ol class="space-y-10">
                         <li v-for="job in jobs" :key="job.company" class="timeline-item relative pl-12">
                             <span
-                                class="timeline-dot absolute left-0 top-6 flex h-6 w-6 items-center justify-center rounded-full border border-violet-400/40 bg-night">
-                                <span class="h-2 w-2 rounded-full bg-violet-400" />
+                                class="timeline-dot absolute left-0 top-6 flex h-6 w-6 items-center justify-center rounded-full border border-pink-300 bg-night">
+                                <span class="h-2 w-2 rounded-full bg-rose-500" />
                             </span>
 
                             <div class="card flex-col flex gap-4">
                                 <div class="flex flex-col gap-1 items-start">
                                     <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-                                        <h3 class="font-display text-xl font-semibold text-white">{{ job.company }}</h3>
+                                        <h3 class="font-display text-xl font-semibold text-slate-900">{{ job.company }}</h3>
                                         <span
-                                            class="rounded-full border border-violet-400/30 bg-violet-400/10 px-3 py-1 text-xs text-violet-300">
+                                            class="rounded-full border border-pink-200 bg-pink-50 px-3 py-1 text-xs text-rose-700">
                                             {{ job.period }}
                                         </span>
                                     </div>
-                                    <p class="text-sm text-zinc-500">{{ job.place }}</p>
+                                    <p class="text-sm text-slate-500">{{ job.place }}</p>
                                 </div>
 
                                 <div class="flex flex-col gap-4">
-                                    <p class="font-medium text-zinc-200">{{ job.role }}</p>
+                                    <p class="font-medium text-slate-700">{{ job.role }}</p>
 
-                                    <ul class="flex flex-col gap-2 text-sm leading-relaxed text-zinc-400">
+                                    <ul class="flex flex-col gap-2 text-sm leading-relaxed text-slate-600">
                                         <li v-for="point in job.points" :key="point" class="flex gap-2.5">
-                                            <span class="mt-0.5 text-violet-400">▸</span>
+                                            <span class="mt-0.5 text-rose-500">▸</span>
                                             <span>{{ point }}</span>
                                         </li>
                                     </ul>
@@ -63,6 +58,8 @@
 <script setup lang="ts">
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+const headerStore = useHeaderStore();
 
 const jobs = [
     {

@@ -1,7 +1,7 @@
 <template>
   <div v-reveal class="flex flex-col gap-3">
     <p class="kicker">{{ kicker }}</p>
-    <h2 class="font-display text-3xl font-semibold text-white sm:text-4xl">
+    <h2 class="section-heading text-4xl text-slate-900 max-md:text-2xl">
       {{ title }}
     </h2>
   </div>
@@ -13,4 +13,3 @@ defineProps<{
     title: string }>
     ()
 </script>
-

@@ -1,10 +1,10 @@
 <template>
-    <section id="skills" ref="root" class="scroll-mt-20 py-24">
+    <section id="skills" ref="root" :style="{ scrollMarginTop: `calc(${headerStore.height}px + 1rem)` }">
         <div class="wrapper">
             <div class="flex flex-col gap-12">
                 <div class="flex flex-col gap-4">
                     <SectionTitle kicker="Навыки" title="Технологии и инструменты" />
-                    <p v-reveal class="max-w-2xl text-zinc-400">
+                    <p v-reveal class="max-w-2xl text-slate-600">
                         Основной стек — Vue и Nuxt. Уверенно работаю с вёрсткой любой сложности,
                         сборщиками и системами контроля версий.
                     </p>
@@ -14,7 +14,7 @@
                 <div class="grid gap-6 md:grid-cols-2">
                     <div v-for="(group, gi) in groups" :key="group.title" v-reveal="{ delay: (gi % 2) * 0.1 }"
                         class="skill-card card flex flex-col gap-5">
-                        <h3 class="font-display text-base font-semibold text-white">{{ group.title }}</h3>
+                        <h3 class="font-display text-base font-semibold text-slate-900">{{ group.title }}</h3>
                         <div class="flex flex-wrap gap-2.5">
                             <span v-for="skill in group.skills" :key="skill" class="skill-tag tag">
                                 {{ skill }}
@@ -31,6 +31,8 @@
 <script setup lang="ts">
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+const headerStore = useHeaderStore();
 
 const groups = [
     { title: 'Языки и разметка', skills: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Vanilla JS', 'SQL'] },

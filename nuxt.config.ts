@@ -2,10 +2,20 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/icon'],
 
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
+  },
+
+  icon: {
+    mode: 'svg',
+    customCollections: [
+      {
+        prefix: 'icon',
+        dir: './app/assets/icons'
+      }
+    ]
   },
 
   app: {
