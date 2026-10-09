@@ -23,14 +23,6 @@
                             <h3 class="font-display text-lg text-slate-900">Татевик Габриелян</h3>
                             <p class="text-sm text-slate-500">Frontend-разработчик</p>
                         </div>
-
-
-                        <ul class="flex flex-col gap-2.5 text-left text-sm text-slate-600">
-                            <li v-for="fact in facts" :key="fact" class="flex items-start gap-2">
-                                <span class="mt-1.5 size-1.5 shrink-0 rounded-full bg-rose-500" />
-                                {{ fact }}
-                            </li>
-                        </ul>
                     </div>
 
                     <div class="flex flex-col gap-10">
